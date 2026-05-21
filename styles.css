@@ -1137,8 +1137,32 @@ html {
             width: 48px;
         }
 
+        .promo-row {
+            flex-direction: column;
+        }
+
+        .promo-image {
+            width: 100%;
+            min-height: 240px;
+            margin-bottom: 1.75rem;
+        }
+
+        .promo-content {
+            padding-left: 0;
+        }
+
         .promo-content h2 {
-            font-size: 1.65rem;
+            font-size: 1.75rem;
+            max-width: 100%;
+        }
+
+        .promo-content p,
+        .promo-content ul {
+            max-width: 100%;
+        }
+
+        .promo-content ul {
+            margin-bottom: 1.5rem;
         }
 
         .featured-section {
