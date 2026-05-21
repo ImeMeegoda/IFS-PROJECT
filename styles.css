@@ -3,6 +3,7 @@
    ============================================ */
 
 :root {
+    /* Common colors and shadow values used throughout the page */
     --primary-color: #ff5252;
     --secondary-color: #4ecdc4;
     --text-dark: #2c3e50;
@@ -144,6 +145,22 @@ html {
     font-size: 0.65rem;
     margin-left: 0.3rem;
 }
+
+.main-menu {
+    /* Keeps the navigation text small and spaced like the sample design */
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.section-intro {
+    /* Shared paragraph style for section descriptions */
+    max-width: 600px;
+    font-size: 0.95rem;
+}
+
+.section-intro-narrow {
+    max-width: 540px;
+}
 /* ============================================
    HERO SECTION
    ============================================ */
@@ -155,6 +172,7 @@ html {
 }
 
 .hero-bg {
+    /* Background image fills the full hero banner */
     position: absolute;
     inset: 0;
     background-image: url("images/home background.png");
@@ -170,6 +188,7 @@ html {
 }
 
 .hero-content {
+    /* Text is kept on the left side so it does not cover the hero image */
     min-height: 560px;
     display: flex;
     flex-direction: column;
@@ -177,6 +196,7 @@ html {
     align-items: flex-start;
     padding-left: 5.2rem;
     padding-top: 5rem;
+    max-width: 610px;
 }
 
 .hero-label {
@@ -190,6 +210,7 @@ html {
 }
 
 .hero-label::before {
+    /* Small vertical line beside the offer text */
     content: "";
     position: absolute;
     left: 0;
@@ -201,13 +222,16 @@ html {
 }
 
 .hero-title {
+    /* The main title stays on one line like the reference screenshot */
     color: #222;
     font-family: 'Poppins', sans-serif;
-    font-size: 4.1rem;
+    font-size: clamp(2.6rem, 4.2vw, 4.1rem);
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 1.1;
     margin-bottom: 1.25rem;
+    max-width: none;
+    white-space: nowrap;
 }
 
 .hero-subtitle {
@@ -284,6 +308,7 @@ html {
 }
 
 @media (max-width: 991.98px) {
+    /* Tablet adjustments for the hero section */
     .hero-section,
     .hero-content {
         min-height: 560px;
@@ -291,10 +316,11 @@ html {
 
     .hero-content {
         padding-left: 3rem;
+        max-width: 500px;
     }
 
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
 
     .hero-arrow-left {
@@ -303,6 +329,48 @@ html {
 
     .hero-arrow-right {
         right: 1.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Mobile hero adjustments to keep text readable over the image */
+    .hero-bg {
+        background-position: 62% center;
+    }
+
+    .hero-content {
+        padding: 4rem 1.25rem 3rem 2.5rem;
+        max-width: 390px;
+        min-height: 520px;
+        background: linear-gradient(90deg, rgba(245, 244, 242, 0.92) 0%, rgba(245, 244, 242, 0.74) 70%, rgba(245, 244, 242, 0) 100%);
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.15rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-label {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-btn {
+        min-width: 180px;
+        min-height: 52px;
+        font-size: 0.82rem;
+    }
+
+    .hero-arrow-left {
+        left: 0.75rem;
+    }
+
+    .hero-arrow-right {
+        right: 0.75rem;
     }
 }
 
@@ -316,6 +384,7 @@ html {
 }
 
 .feature-item {
+    /* Icon and text are placed side by side */
     display: flex;
     align-items: center;
     gap: 1.35rem;
@@ -396,6 +465,7 @@ html {
 }
 
 .product-image {
+    /* Product image boxes keep the same shape in every card */
     aspect-ratio: 3 / 4;
     height: auto !important;
     min-height: 0;
@@ -403,7 +473,12 @@ html {
     transition: all 0.3s ease;
 }
 
+.product-image-large {
+    aspect-ratio: 1 / 1.08;
+}
+
 .product-photo {
+    /* Product photos fit inside the box without being cropped */
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -457,6 +532,7 @@ html {
 }
 
 .promo-row {
+    /* Adds extra horizontal space between promo image and text */
     --bs-gutter-x: 4rem;
 }
 
@@ -552,6 +628,11 @@ html {
     transition: all 0.3s ease;
 }
 
+.tab-links {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
 .tab-links .nav-link.active, .tab-links .nav-link:hover {
     color: var(--primary-color) !important;
     border-bottom-color: var(--primary-color);
@@ -565,6 +646,7 @@ html {
 }
 
 .product-countdown {
+    /* Small countdown box placed over the third product image */
     position: absolute;
     top: 50%;
     right: 0.9rem;
@@ -596,6 +678,50 @@ html {
 /* ============================================
    BLOG SECTION (Homepage specific)
    ============================================ */
+
+.testimonial-section {
+    /* Quote section background image */
+    background-color: #f6f5ef;
+    background-image: url("images/torvi coo background image.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.testimonial-arrow {
+    /* Positions the testimonial arrows vertically in the middle */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+
+.testimonial-arrow-left {
+    left: 0;
+}
+
+.testimonial-arrow-right {
+    right: 0;
+}
+
+.testimonial-text {
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.author-img {
+    width: 70px;
+    height: 70px;
+}
+
+.expert-image {
+    /* Circular image size for each flower expert */
+    width: 180px;
+    height: 180px;
+}
+
+.expert-role {
+    letter-spacing: 1px;
+}
 
 .blog-section .card {
     transition: all 0.3s ease;
@@ -713,6 +839,7 @@ html {
 }
 
 .newsletter-form {
+    /* Minimal underline-style email form */
     width: min(620px, 100%);
     margin: 0 auto;
     border-bottom: 1px solid #333;
@@ -780,6 +907,7 @@ html {
 }
 
 .footer-main {
+    /* Main footer spacing */
     padding-top: 6.5rem;
     padding-bottom: 6.5rem;
 }
