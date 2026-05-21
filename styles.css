@@ -1024,9 +1024,148 @@ html {
     display: block;
 }
 
-@media (max-width: 767.98px) {
-    .footer-main {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+    @media (max-width: 991.98px) {
+        .search-placeholder {
+            display: none;
+        }
+
+        .nav-icons {
+            gap: 1rem;
+        }
+
+        .hero-content {
+            padding-left: 2rem;
+            max-width: 540px;
+        }
+
+        .promo-row {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .promo-image {
+            height: auto;
+            min-height: 260px;
+        }
+
+        .feature-item {
+            min-height: auto;
+            padding: 1.25rem;
+        }
+
+        .product-card {
+            padding: 1.2rem;
+        }
+
+        .testimonial-arrow-left {
+            left: 1rem;
+        }
+
+        .testimonial-arrow-right {
+            right: 1rem;
+        }
     }
-}
+
+    @media (max-width: 767.98px) {
+        .footer-main {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .navbar .navbar-brand {
+            width: auto;
+        }
+
+        .navbar .navbar-collapse {
+            background: white;
+            padding: 1rem 1.15rem 1.15rem;
+        }
+
+        .nav-icons {
+            gap: 0.75rem;
+        }
+
+        .hero-section {
+            min-height: 520px;
+        }
+
+        .hero-content {
+            padding: 3rem 1.25rem 2rem;
+            max-width: 100%;
+        }
+
+        .hero-title {
+            font-size: 1.95rem;
+            white-space: normal;
+        }
+
+        .hero-subtitle {
+            font-size: 1.13rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .hero-btn {
+            min-width: 170px;
+            min-height: 50px;
+            font-size: 0.85rem;
+        }
+
+        .hero-arrow-left {
+            left: 0.75rem;
+        }
+
+        .hero-arrow-right {
+            right: 0.75rem;
+        }
+
+        .feature-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .feature-item h6 {
+            font-size: 1.15rem;
+        }
+
+        .product-image {
+            aspect-ratio: 4 / 5;
+        }
+
+        .product-countdown {
+            right: 0.65rem;
+            width: 48px;
+        }
+
+        .promo-content h2 {
+            font-size: 1.65rem;
+        }
+
+        .featured-section {
+            padding: 2rem 0 4rem;
+        }
+
+        .blog-section {
+            padding-bottom: 2rem;
+        }
+
+        .blog-post {
+            padding: 1.4rem;
+        }
+
+        .newsletter-form {
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            padding-bottom: 0;
+        }
+
+        .newsletter-form button {
+            width: 100%;
+            border-radius: 999px;
+            padding: 0.95rem 0;
+        }
+
+        .footer-section .row > [class*='col-'] {
+            margin-bottom: 1.5rem;
+        }
+    }
